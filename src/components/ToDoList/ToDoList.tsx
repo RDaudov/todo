@@ -1,13 +1,18 @@
 import { ToDo } from "../../models/todo-items"
 import { ToDoListItem } from "./ToDoListItem/ToDoListItem"
 
-export const ToDoList = (props: {items: ToDo[]}) => {
+export const ToDoList = (props: { items: ToDo[], updateToDo: Function, deleteToDo: Function }) => {
 
     const checkedList = () => props.items
         .filter((item) => item.isDone)
         .map((item, idx) => {
             return (
-                <ToDoListItem toDoItem={item} key={idx} />
+                <ToDoListItem
+                    toDoItem={item}
+                    key={idx}
+                    updateToDo={props.updateToDo}
+                    deleteToDo={props.deleteToDo}
+                />
             )
         })
 
@@ -15,7 +20,12 @@ export const ToDoList = (props: {items: ToDo[]}) => {
         .filter((item) => !item.isDone)
         .map((item, idx) => {
             return (
-                <ToDoListItem toDoItem={item} key={idx} />
+                <ToDoListItem
+                    toDoItem={item}
+                    key={idx}
+                    updateToDo={props.updateToDo}
+                    deleteToDo={props.deleteToDo}
+                />
             )
         })
 
