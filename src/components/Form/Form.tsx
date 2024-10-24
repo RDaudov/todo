@@ -1,18 +1,17 @@
 import classes from './Form.module.scss'
-import { useState } from 'react'
 
-export const Form = (props: { createNewToDo: Function }) => {
-
-    const [text, setText] = useState<string>('')
+export const Form = (props: { text: string, createNewToDo: Function, setValue: Function }) => {
+    const setText = (e: React.ChangeEvent<HTMLInputElement>) => {
+        props.setValue(e.target.value) 
+    }
 
     const formSubmit = (event: React.SyntheticEvent) => {
         event.preventDefault()
 
-        if (text) {
-            props.createNewToDo(text);
-            setText('')
+        if (props.text) {
+            props.createNewToDo(props.text);
+            props.setValue('')
         }
-
     }
 
     return (
@@ -21,8 +20,8 @@ export const Form = (props: { createNewToDo: Function }) => {
                 <label>
                     <input
                         type="text"
-                        value={text}
-                        onChange={(e) => setText(e.target.value)}
+                        value={props.text}
+                        onChange={setText}
                     />
                     <button></button>
                 </label>

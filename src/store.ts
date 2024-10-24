@@ -1,32 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
 import todoReducer from './feature/todoList'
-
-const saveToLocalStorage = (state: RootState) => {
-    try {
-        const appState = JSON.stringify(state)
-        localStorage.setItem('appState', appState)
-    } catch (error) {
-        console.warn(error);
-    }
-
-
-}
-
-const loadFromLocalStorage = () => {
-    try {
-        const appState = localStorage.getItem('appState')
-        if (!appState) return undefined
-        return JSON.parse(appState)
-
-    } catch (error) {
-        console.warn(error);
-        return undefined
-    }
-}
+import formReducer from './feature/todoText'
+import { loadFromLocalStorage, saveToLocalStorage } from './helpers/storage'
 
 export const store = configureStore({
     reducer: {
-        todoList: todoReducer
+        todoList: todoReducer,
+        form: formReducer
     },
     preloadedState: loadFromLocalStorage()
 })

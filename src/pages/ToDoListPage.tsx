@@ -6,9 +6,11 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store";
 import { createAction, deleteAction, updateAction } from "../feature/todoList";
+import { setValueAction } from "../feature/todoText";
 
 export const ToDoListPage = () => {
     const todoList = useSelector((state: RootState) => state.todoList.todos)
+    const text = useSelector((state: RootState) => state.form.text)
     const dispatch = useDispatch()
 
     const createNewToDo = (text: string) => {
@@ -23,9 +25,13 @@ export const ToDoListPage = () => {
         dispatch(deleteAction(toDoItem))
     }
 
+    const setValue = (text: string) => {
+        dispatch(setValueAction(text))
+    }
+
     return (
         <>
-            <Form createNewToDo={createNewToDo} />
+            <Form text={text} createNewToDo={createNewToDo} setValue={setValue} />
             <ToDoList
                 items={todoList}
                 updateToDo={updateToDo}
