@@ -25,26 +25,20 @@
   "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   "screenshots": [
     {
-        "src": "narrow1.png",
-        "sizes": "566x896",
-        "type": "image/png",
-        "form_factor": "narrow"
-    }, 
-    {
         "src": "narrow2.png",
-        "sizes": "566x896",
+        "sizes": "566x898",
         "type": "image/png",
         "form_factor": "narrow"
     }, 
     {
         "src": "narrow3.png",
-        "sizes": "566x896",
+        "sizes": "566x898",
         "type": "image/png",
         "form_factor": "narrow"
     }, 
     {
         "src": "narrow4.png",
-        "sizes": "566x896",
+        "sizes": "566x898",
         "type": "image/png",
         "form_factor": "narrow"
     }
