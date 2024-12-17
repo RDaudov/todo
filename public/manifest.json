@@ -25,18 +25,6 @@
   "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   "screenshots": [
     {
-        "src": "wide.png",
-        "sizes": "1540x866",
-        "type": "image/png",
-        "form_factor": "wide"
-    },
-    {
-      "src": "wide1.png",
-      "sizes": "1535x865",
-      "type": "image/png",
-      "form_factor": "wide"
-    }, 
-    {
         "src": "narrow.png",
         "sizes": "566x866",
         "type": "image/png",
