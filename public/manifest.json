@@ -47,6 +47,24 @@
         "sizes": "559x896",
         "type": "image/png",
         "form_factor": "narrow"
+    }, 
+    {
+        "src": "narrow2.png",
+        "sizes": "559x896",
+        "type": "image/png",
+        "form_factor": "narrow"
+    }, 
+    {
+        "src": "narrow3.png",
+        "sizes": "559x896",
+        "type": "image/png",
+        "form_factor": "narrow"
+    }, 
+    {
+        "src": "narrow4.png",
+        "sizes": "559x896",
+        "type": "image/png",
+        "form_factor": "narrow"
     }
 ]
 }
