@@ -32,7 +32,7 @@
     },
     {
       "src": "wide1.png",
-      "sizes": "1540x866",
+      "sizes": "1535x865",
       "type": "image/png",
       "form_factor": "wide"
     }, 
@@ -44,7 +44,7 @@
     }, 
     {
         "src": "narrow1.png",
-        "sizes": "566x866",
+        "sizes": "559x896",
         "type": "image/png",
         "form_factor": "narrow"
     }
